@@ -28,7 +28,14 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testGetTotal() {
-		fail("Not yet implemented");
+		//Creating a new object of class Calculator
+		Calculator c = new Calculator();
+		//Get total should return 0 because the default value is set to 0
+		assertEquals(0 , c.getTotal());
+		//Adding 2 to the total to update its value
+		c.add(2);
+		//Checking if the value is updated or not
+		assertEquals(2 , c.getTotal());
 	}
 
 	/**
@@ -36,7 +43,14 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented");
+		//Creating a new object of class Calculator
+		Calculator c = new Calculator();
+		//Adding 2 to the total
+		c.add(2);
+		assertEquals(2, c.getTotal());
+		//Adding 5 to the total
+		c.add(5);
+		assertEquals(7, c.getTotal());
 	}
 
 	/**
@@ -44,7 +58,15 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testSubtract() {
-		fail("Not yet implemented");
+		//Creating a new object of class calculator
+		Calculator c = new Calculator();
+		//Subtracting 4 from the total
+		c.subtract(4);
+		assertEquals(-4 , c.getTotal());
+		//Subtracting 7 from the total
+		c.subtract(7);
+		assertEquals(-11 , c.getTotal());
+		
 	}
 
 	/**
@@ -52,7 +74,20 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testMultiply() {
-		fail("Not yet implemented");
+		//Creating a new object of class Calculator
+		Calculator c = new Calculator();
+		//Multiplying the total by 12
+		c.multiply(12);
+		assertEquals(0 , c.getTotal());
+		//Multiplying the total by 8
+		c.multiply(8);
+		assertEquals(0, c.getTotal());
+		//Adding 4 to the total
+		c.add(4);
+		assertEquals(4 , c.getTotal());
+		//Multiplying the total by 2
+		c.multiply(2);
+		assertEquals(8, c.getTotal());
 	}
 
 	/**
@@ -60,7 +95,21 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testDivide() {
-		fail("Not yet implemented");
+		//Creating a new object of class Calculator
+		Calculator c = new Calculator();
+		//Dividing the total by 10
+		c.divide(10);
+		assertEquals(0 , c.getTotal());
+		//Adding 15 to the total
+		c.add(15);
+		assertEquals(15, c.getTotal());
+		//Dividing the total by 3
+		c.divide(3);
+		assertEquals(5 , c.getTotal());
+		//Dividing the total by 0
+		c.divide(0);
+		assertEquals(0 , c.getTotal());
+		
 	}
 
 	/**
@@ -68,7 +117,9 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testGetHistory() {
-		fail("Not yet implemented");
+		Calculator c = new Calculator();
+		assertEquals("" , c.getHistory());
+	
 	}
 
 }

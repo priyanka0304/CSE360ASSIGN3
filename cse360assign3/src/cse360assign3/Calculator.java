@@ -23,13 +23,13 @@ public class Calculator {
 	/** 
 	 * @return sum **/
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/** Addition operation
 	 * @param operand **/
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/** Subtraction operation
@@ -37,7 +37,7 @@ public class Calculator {
 	 * @param value
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/** Multiplication operation
@@ -45,7 +45,7 @@ public class Calculator {
 	 * @param value
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/** Division operation
@@ -53,7 +53,11 @@ public class Calculator {
 	 * @param value
 	 */
 	public void divide (int value) {
-		
+		//if divisor is 0 then total becomes 0 - handling division by 0
+		if(value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
 	
 	/** To get the history
