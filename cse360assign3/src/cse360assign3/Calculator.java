@@ -13,10 +13,11 @@ package cse360assign3;
 public class Calculator {
 
 	private int total;
-	
+	private String history;
 	/** Constructor of class Calculator **/
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "";
 	}
 	
 	
@@ -30,6 +31,9 @@ public class Calculator {
 	 * @param operand **/
 	public void add (int value) {
 		total = total + value;
+		if(history == "" )
+			history = history + "0";
+		history = history + " + "+value;
 	}
 	
 	/** Subtraction operation
@@ -38,6 +42,10 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		if(history == "" )
+			history = history + "0";
+		history = history + " - "+value;
+
 	}
 	
 	/** Multiplication operation
@@ -46,6 +54,10 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		if(history == "" )
+			history = history + "0";
+		history = history + " * "+value;
+
 	}
 	
 	/** Division operation
@@ -58,6 +70,10 @@ public class Calculator {
 			total = 0;
 		else
 			total = total / value;
+		if(history == "" )
+			history = history + "0";
+		history = history + " / "+value;
+
 	}
 	
 	/** To get the history
@@ -65,6 +81,6 @@ public class Calculator {
 	 * @return history
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }

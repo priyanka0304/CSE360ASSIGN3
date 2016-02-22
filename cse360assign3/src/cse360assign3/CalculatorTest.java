@@ -117,8 +117,22 @@ public class CalculatorTest {
 	 */
 	@Test
 	public void testGetHistory() {
+		//Creating a new object of class Calculator
 		Calculator c = new Calculator();
+		//getHistory should return empty string as no operations have been performed
 		assertEquals("" , c.getHistory());
+		//Adding 15 to the total
+		c.add(15);
+		assertEquals("0 + 15" , c.getHistory());
+		//Subtracting 3 from the total
+		c.subtract(3);
+		assertEquals("0 + 15 - 3" , c.getHistory());
+		//Dividing total by 4
+		c.divide(4);
+		assertEquals("0 + 15 - 3 / 4" , c.getHistory());
+		//Multiplying total by 2
+		c.multiply(2);
+		assertEquals("0 + 15 - 3 / 4 * 2" , c.getHistory());
 	
 	}
 
